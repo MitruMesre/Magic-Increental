@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Magic Incremental</title>
+</head>
+
+<body style="background-color: #333; color: whitesmoke">
+    <h1>Magic Incremental</h1>
+    <hr>
+    <div>
+        <h2>Mana:
+            <span id="ManaAmount">0</span>
+            /
+            <span id="ManaMaximum">0</span>
+            <br>
+            +
+            <span id="ManaPerSecond">0</span>
+            /s
+        </h2>
+        <h2>
+            Metal:
+            <span id="MetalAmount">0</span>
+            /
+            <span id="MetalMaximum">0</span>
+            <br>
+            +
+            <span id="MetalPerSecond">0</span>
+            /s
+        </h2>
+    </div>
+    <hr>
+    <div>
+        <h2>Buildings</h2>
+        <button onclick="gameData.buildings.metalCollector.build(gameData.resources)">
+            Metal Collector:
+            <span id="MetalCollectorAmount">0</span>
+            <br>
+            <span id="MetalCollectorCost">0</span>
+            <br>
+            +<span id="MetalCollectorEffect">0</span>/s
+        </button>
+        <button onclick="gameData.buildings.manaGenerator.build(gameData.resources)">
+            Mana Generator:
+            <span id="ManaGeneratorAmount">0</span>
+            <br>
+            <span id="ManaGeneratorCost">0</span>
+            <br>
+            +<span id="ManaGeneratorEffect">0</span>/s
+        </button>
+        <button onclick="gameData.buildings.superAccumulator.build(gameData.resources)">
+            Super Accumulator:
+            <span id="SuperAccumulatorAmount">0</span>
+            <br>
+            <span id="SuperAccumulatorCost">0</span>
+            <br>
+            +<span id="SuperAccumulatorEffect">0</span>/s
+        </button>
+        <br>
+        <button onclick="gameData.buildings.manaStorage.build(gameData.resources)">
+            Mana Storage:
+            <span id="ManaStorageAmount">0</span>
+            <br>
+            <span id="ManaStorageCost">0</span>
+            <br>
+            +<span id="ManaStorageEffect">0</span> Max
+        </button>
+        <button onclick="gameData.buildings.metalStorage.build(gameData.resources)">
+            Metal Storage:
+            <span id="MetalStorageAmount">0</span>
+            <br>
+            <span id="MetalStorageCost">0</span>
+            <br>
+            +<span id="MetalStorageEffect">0</span> Max
+        </button>
+        <button onclick="gameData.buildings.superStorage.build(gameData.resources)">
+            Super Storage:
+            <span id="SuperStorageAmount">0</span>
+            <br>
+            <span id="SuperStorageCost">0</span>
+            <br>
+            +<span id="SuperStorageEffect">0</span> Max
+        </button>
+    </div>
+    <hr>
+    <div>
+        <h2>Upgrades</h2>
+        <button onclick="gameData.upgrades.cheaperProduction.purchase(gameData.resources)">
+            <h3>
+                Cheaper Production
+            </h3>
+            Metal Collector and Mana Generator Cost Creep halved
+            <br>
+            Cost: 100 Mana, 100 Metal
+            <br>
+            Purchased: <span id="CheaperProductionPurchasedBool">False</span>
+        </button>
+        <button onclick="gameData.upgrades.morePowerfulMachines.purchase(gameData.resources)">
+            <h3>
+                More Powerful Machines
+            </h3>
+            Metal Collector and Mana Generator are twice as effective
+            <br>
+            Cost: 500 Mana, 500 Metal
+            <br>
+            Purchased: <span id="MorePowerfulMachinesPurchasedBool">False</span>
+        </button>
+        <button onclick="gameData.upgrades.increasedStorage.purchase(gameData.resources)">
+            <h3>
+                Increased Storage
+            </h3>
+            All Storage twice as effective
+            <br>
+            Cost: 200 Mana, 200 Metal
+            <br>
+            Purchased: <span id="IncreasedStoragePurchasedBool">False</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
